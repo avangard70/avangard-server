@@ -15,7 +15,8 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "https://remjest-avangard-testing-e1b1.twc1.net", // Основной адрес
                         "http://localhost:3000",
-                        "https://avangard-70.ru"
+                        "https://avangard-70.ru",
+                        "https://www.avangard-70.ru"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true);
