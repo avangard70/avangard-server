@@ -58,10 +58,16 @@ public class DataInitializer implements CommandLineRunner {
             return;
         }
         mainPageService.createDefaultMainPageIfNotExists();
-        Admin admin = new Admin();
-        admin.setLogin("avangard-admin");
-        admin.setPassword(passwordEncoder.encode("15055051qwe"));
-        adminRepository.save(admin);
+
+        if (adminRepository.count() == 0) { // <-- КЛЮЧЕВАЯ ПРОВЕРКА
+            Admin admin = new Admin();
+            admin.setLogin("avangard-admin");
+            admin.setPassword(passwordEncoder.encode("15055051qwe"));
+            adminRepository.save(admin);
+            System.out.println("✅ Админ создан");
+        } else {
+            System.out.println("ℹ️ Админ уже существует");
+        }
 
         System.out.println("🔄 Начинаем инициализацию базы данных...");
 
