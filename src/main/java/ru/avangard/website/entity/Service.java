@@ -53,8 +53,7 @@ public class Service {
     @Column(name = "subtitle")
     private String subtitle;
 
-    @Lob
-    @Column(name = "subText", length = 3000)
+    @Column(name = "subText", length = 5000)
     private String subText;
 
     @Column(name = "alias")
