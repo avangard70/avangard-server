@@ -12,3 +12,5 @@ RUN mvn clean package -DskipTests
 
 # Запускаем JAR
 CMD ["java", "-jar", "target/website-1.0.0.jar"]
+
+EXPOSE 8080
