@@ -105,6 +105,9 @@ public class MainPageService {
         existingPage.setPropertyValuationInfo(dto.getPropertyValuation().getInfo());
         existingPage.setPropertyValuationImageUrl(dto.getPropertyValuation().getImageURL());
         existingPage.setPropertyValuationPrice(dto.getPropertyValuation().getPrice());
+        existingPage.setMetaDescription(dto.getMetaDescription());
+        existingPage.setMetaTitle(dto.getMetaTitle());
+        existingPage.setMetaKeywords(dto.getMetaKeywords());
 
         if (!java.util.Objects.equals(oldVideoUrl, dto.getAbout().getVideoURL())) {
             deleteFileIfPresent(oldVideoUrl);
