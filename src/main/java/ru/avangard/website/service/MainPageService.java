@@ -70,7 +70,7 @@ public class MainPageService {
                     mp.getPropertyValuationPrice()
             );
 
-            return Optional.of(new MainPageDto(about, propertyValuation, workPrinciples, advantages, "ООО «Авангард» — Юридическая помощь в Томске", "ООО «Авангард» — Юридическая помощь в Томске", ""));
+            return Optional.of(new MainPageDto(about, propertyValuation, workPrinciples, advantages, mp.getMetaDescription(), mp.getMetaTitle(), mp.getMetaKeywords()));
         } else {
             return Optional.empty();
         }

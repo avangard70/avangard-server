@@ -10,10 +10,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/main-page")
-@CrossOrigin(origins = {
-        "https://remjest-avangard-testing-e1b1.twc1.net",
-        "http://localhost:3000"
-})
 public class MainPageController {
 
     private final MainPageService mainPageService;
